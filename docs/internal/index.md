@@ -4,5 +4,5 @@ This section is only for internal use. It is supposed to serve as the maintenanc
 
 - [Overview](overview.md)
 - [Docs Writing Guide](docs-writing-guide.md)
-- [Maintenance](maintenance.md)
+- [Maintenance Guide](maintenance-guide.md)
 
