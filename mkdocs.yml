@@ -1,0 +1,32 @@
+site_name: AVerMedia Developer Hub
+site_url: https://example.com
+
+theme:
+  name: "material"
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.prune
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Products:
+    - products/index.md
+  - Internal:
+    - internal/index.md
+    - Overview: internal/overview.md
+    - Docs Writing Guide: internal/docs-writing-guide.md
+    - Maintenance Guide: internal/maintenance-guide.md
