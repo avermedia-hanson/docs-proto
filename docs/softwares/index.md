@@ -14,6 +14,16 @@ Here we list the softwares that are available. The documentation for each softwa
 
     [:octicons-arrow-right-24: Explore the SDK](some-streaming-sdk/index.md)
 
+-   :loud_sound: Some Audio SDK
+
+    ---
+
+    (Tell the customers how powerful the SDK is here.)
+
+    All the documentation for this SDK, except for the entry page, is handled by Doxygen. The Doxygen-generated HTML files are just copied to this project.
+
+    [:octicons-arrow-right-24: Explore the SDK](some-audio-sdk/index.md)
+
 -   :material-face-agent: Some AI SDK
 
     ---

@@ -52,6 +52,8 @@ nav:
         - Use Case 1: softwares/some-streaming-sdk/examples/use-case-1.md
         - Use Case 2: softwares/some-streaming-sdk/examples/use-case-2.md
       - API Reference: softwares/some-streaming-sdk/api/index.md
+    - Some Audio SDK:
+      - softwares/some-audio-sdk/index.md
     - Some AI SDK:
       - softwares/some-ai-sdk/index.md
   - Internal:
