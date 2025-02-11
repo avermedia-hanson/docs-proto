@@ -54,6 +54,8 @@ nav:
       - API Reference: softwares/some-streaming-sdk/api/index.md
     - Some Audio SDK:
       - softwares/some-audio-sdk/index.md
+    - Some Video SDK:
+      - softwares/some-video-sdk/index.html
     - Some AI SDK:
       - softwares/some-ai-sdk/index.md
   - Internal:

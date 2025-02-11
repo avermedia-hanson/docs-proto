@@ -1,0 +1,4 @@
+[submodule "docs/softwares/some-video-sdk"]
+	path = docs/softwares/some-video-sdk
+	url = ssh://git@ssh.github.com:443/avermedia-hanson/some-video-sdk.git
+	branch = gh-pages
