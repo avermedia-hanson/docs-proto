@@ -1,27 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://example.com/</loc>
-         <lastmod>2025-02-07</lastmod>
+         <loc>https://avermedia-hanson.github.io/docs-proto/</loc>
+         <lastmod>2025-02-11</lastmod>
     </url>
     <url>
-         <loc>https://example.com/internal/</loc>
-         <lastmod>2025-02-07</lastmod>
+         <loc>https://avermedia-hanson.github.io/docs-proto/internal/</loc>
+         <lastmod>2025-02-11</lastmod>
     </url>
     <url>
-         <loc>https://example.com/internal/docs-writing-guide/</loc>
-         <lastmod>2025-02-07</lastmod>
+         <loc>https://avermedia-hanson.github.io/docs-proto/internal/docs-writing-guide/</loc>
+         <lastmod>2025-02-11</lastmod>
     </url>
     <url>
-         <loc>https://example.com/internal/maintenance-guide/</loc>
-         <lastmod>2025-02-07</lastmod>
+         <loc>https://avermedia-hanson.github.io/docs-proto/internal/maintenance-guide/</loc>
+         <lastmod>2025-02-11</lastmod>
     </url>
     <url>
-         <loc>https://example.com/internal/overview/</loc>
-         <lastmod>2025-02-07</lastmod>
+         <loc>https://avermedia-hanson.github.io/docs-proto/internal/overview/</loc>
+         <lastmod>2025-02-11</lastmod>
     </url>
     <url>
-         <loc>https://example.com/products/</loc>
-         <lastmod>2025-02-07</lastmod>
+         <loc>https://avermedia-hanson.github.io/docs-proto/softwares/</loc>
+         <lastmod>2025-02-11</lastmod>
+    </url>
+    <url>
+         <loc>https://avermedia-hanson.github.io/docs-proto/softwares/some-ai-sdk/</loc>
+         <lastmod>2025-02-11</lastmod>
+    </url>
+    <url>
+         <loc>https://avermedia-hanson.github.io/docs-proto/softwares/some-ai-sdk/getting-started/</loc>
+         <lastmod>2025-02-11</lastmod>
+    </url>
+    <url>
+         <loc>https://avermedia-hanson.github.io/docs-proto/softwares/some-ai-sdk/examples/</loc>
+         <lastmod>2025-02-11</lastmod>
+    </url>
+    <url>
+         <loc>https://avermedia-hanson.github.io/docs-proto/softwares/some-audio-sdk/</loc>
+         <lastmod>2025-02-11</lastmod>
+    </url>
+    <url>
+         <loc>https://avermedia-hanson.github.io/docs-proto/softwares/some-streaming-sdk/</loc>
+         <lastmod>2025-02-11</lastmod>
+    </url>
+    <url>
+         <loc>https://avermedia-hanson.github.io/docs-proto/softwares/some-streaming-sdk/getting-started/</loc>
+         <lastmod>2025-02-11</lastmod>
+    </url>
+    <url>
+         <loc>https://avermedia-hanson.github.io/docs-proto/softwares/some-streaming-sdk/api/</loc>
+         <lastmod>2025-02-11</lastmod>
+    </url>
+    <url>
+         <loc>https://avermedia-hanson.github.io/docs-proto/softwares/some-streaming-sdk/examples/</loc>
+         <lastmod>2025-02-11</lastmod>
+    </url>
+    <url>
+         <loc>https://avermedia-hanson.github.io/docs-proto/softwares/some-streaming-sdk/examples/use-case-1/</loc>
+         <lastmod>2025-02-11</lastmod>
+    </url>
+    <url>
+         <loc>https://avermedia-hanson.github.io/docs-proto/softwares/some-streaming-sdk/examples/use-case-2/</loc>
+         <lastmod>2025-02-11</lastmod>
     </url>
 </urlset>
