@@ -16,6 +16,7 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.tooltips
   logo: assets/images/logo.png
   favicon: assets/images/favicon.png
   palette:
@@ -38,6 +39,7 @@ plugins:
 
 markdown_extensions:
   - attr_list
+  - footnotes
   - md_in_html
   - admonition
   - pymdownx.superfences

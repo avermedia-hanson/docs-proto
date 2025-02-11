@@ -7,6 +7,15 @@ hide:
 
 This is a prototype for the AVerMedia Developer Hub (tentative name), a site for developers to learn about AVerMedia products and technologies. This site is built with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), a documentation tool based on [MkDocs](https://www.mkdocs.org/).
 
+The main contents are in the [Softwares](softwares/index.md) section, where we demonstrate some of the features of this site and different ways to handle documentation of software products.
+
+<figure>
+  <img src="https://picsum.photos/1200/400" width="100%" alt="Random placeholder image">
+  <figcaption>
+    This is a random image from <a href="https://picsum.photos/">Lorem Picsum</a>.
+  </figcaption>
+</figure>
+
 ## Section 1
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
