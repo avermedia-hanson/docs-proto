@@ -2,7 +2,7 @@
 
 As the home page of the software tab, our software products may be showcased here.
 
-But this is just a prototype, so we are going to demonstrate different ways to handle software documentation, with a bunch of dummy software projects. Here is an overview of these projects:
+But this is just a prototype, so we are going to demonstrate different ways to handle software documentation, with a bunch of dummy software projects.
 
 Here is a brief summary table of the dummy software projects in the demo:
 
