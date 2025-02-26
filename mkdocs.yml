@@ -46,6 +46,11 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -75,7 +80,10 @@ nav:
     - Some AI SDK:
       - softwares/some-ai-sdk/index.md
   - Internal:
-    - internal/index.md
-    - Overview: internal/overview.md
-    - Docs Writing Guide: internal/docs-writing-guide.md
-    - Maintenance Guide: internal/maintenance-guide.md
+    - internal/tutorial-zhtw/index.md
+    - Material for MkDocs 簡易教學:
+      - internal/tutorial-zhtw/index.md
+      - 快速開始: internal/tutorial-zhtw/getting-started.md
+      - 如何撰寫 Markdown 文件: internal/tutorial-zhtw/markdown.md
+      - 設定 MkDocs 專案: internal/tutorial-zhtw/configuration.md
+      - 建立不同版本的文件: internal/tutorial-zhtw/versioning.md
