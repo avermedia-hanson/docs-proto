@@ -757,6 +757,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      註解 (Annotation)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#footnotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      腳註 (footnotes)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       更多種列表
@@ -790,27 +808,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#annotation" class="md-nav__link">
-    <span class="md-ellipsis">
-      註解 (Annotation)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#footnotes" class="md-nav__link">
-    <span class="md-ellipsis">
-      腳註 (footnotes)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#icons" class="md-nav__link">
     <span class="md-ellipsis">
-      Icons
+      圖示 (Icons)
     </span>
   </a>
   
@@ -1016,6 +1016,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      註解 (Annotation)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#footnotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      腳註 (footnotes)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       更多種列表
@@ -1049,27 +1067,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#annotation" class="md-nav__link">
-    <span class="md-ellipsis">
-      註解 (Annotation)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#footnotes" class="md-nav__link">
-    <span class="md-ellipsis">
-      腳註 (footnotes)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#icons" class="md-nav__link">
     <span class="md-ellipsis">
-      Icons
+      圖示 (Icons)
     </span>
   </a>
   
@@ -1364,22 +1364,79 @@
 </ul>
 </div>
 </details>
+<h2 id="annotation">註解 (Annotation)</h2>
+<p class="annotate">Material for MkDocs 提供的註解功能，讓我們可以在段落中的任何位置插入註解，適合用在你想補充說明一件事，但又不希望這件事太佔空間的時候(1)。</p>
+<ol>
+<li>
+<p>比如當你突然因為某種謎之衝動突然很想插入一大段隨機拉丁文的時候 <img alt="🫢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1fae2.svg" title=":face_with_open_eyes_and_hand_over_mouth:" /></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</li>
+</ol>
+<p>要啟用此功能，需要在 <code>mkdocs.yml</code> 中加入以下設定：</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attr_list</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">md_in_html</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.superfences</span>
+</span></code></pre></div>
+<p>使用註解功能的方式稍微比較複雜一點。首先在需要插入註解的地方，在「最外側 Markdown 區塊」的最後加入一行 <code>{ .annotate }</code> 如下：</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>{ .annotate }
+</span></code></pre></div>
+<p>這個語法會讓這個段落對應的 HTML 元素被加上 <code>annotate</code> 這個 class，接著我們就可以在段落中用 <code>(1)</code> 插入註解，並在後面用 <code>1.</code> 來完成註解內容。語法如下：</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Lorem ipsum dolor sit amet, consectetur(1) adipiscing elit, sed do eiusmod tempor(2) incididunt ut labore et dolore magna aliqua.
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>{ .annotate }
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">1.</span>  這是放在 consectetur 後面的註解
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">2.</span>  這是放在 tempor 後面的註解
+</span></code></pre></div>
+<details class="example">
+<summary>Preview</summary>
+<p class="annotate">Lorem ipsum dolor sit amet, consectetur(1) adipiscing elit, sed do eiusmod tempor(2) incididunt ut labore et dolore magna aliqua.</p>
+<ol>
+<li>這是放在 consectetur 後面的註解</li>
+<li>這是放在 tempor 後面的註解</li>
+</ol>
+</details>
+<h2 id="footnotes">腳註 (footnotes)</h2>
+<p class="annotate">這個功能讓我們可以在文章中加入腳註，腳註的內容會出現在文章的最後面(1)，並且會附帶連結，讓我們可以在文章和腳註之間跳來跳去。要啟用此功能，需要在 <code>mkdocs.yml</code> 中加入以下設定：</p>
+<ol>
+<li>Material for MkDocs 其實也有讓腳註加上 hover 效果（當滑鼠移到腳註標籤上時，會顯示出腳註內容）的功能，不過這個功能是贊助者 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"/></svg></span> 專屬的 <img alt="🥸" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f978.svg" title=":disguised_face:" /></li>
+</ol>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">footnotes</span>
+</span></code></pre></div>
+<p class="annotate">開啟功能後，我們可以在文件的任何地方使用 <code>[^1]</code> 插入腳註(1):</p>
+<ol>
+<li>這裡面的數字只是方便辨識（腳註的 ID），實際在產生網頁的時候會根據腳註出現的順序自動編號。但要注意這邊使用的數字不能重複，否則可能會有腳註內容被覆蓋掉。</li>
+</ol>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Lorem ipsum dolor sit amet, consectetur[^3] adipiscing elit, sed do eiusmod tempor[^4] incididunt ut labore et dolore magna aliqua.
+</span></code></pre></div>
+<p>而腳註內容可以在文件的任何地方補上，語法如下</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>[<span class="nl">^3</span>]: <span class="na">這是放在 consectetur 後面的腳註</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>[<span class="nl">^4</span>]:
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="na">這是放在 tempor 後面的腳註，我們可以利用縮排方式把好幾行文字都塞進來，但只能有一個段落（中間不能空行）。</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    以下假文章產生自[這邊](https://pinkylam.me/generator/chinese-lorem-ipsum/)：比化英交至園聽金想五師「眼水旦消羊雞北」很水各找那在良旁見林昌只祖雲同方，放員衣？古林哥只夕歡道重示媽信要采原犬做外裏意包，尼蝴祖何抄合高里玉坐笑從蝶什皮飯固法就九，視己又蝶苦隻尾快見。
+</span></code></pre></div>
+<details class="example">
+<summary>Preview</summary>
+<p>Lorem ipsum dolor sit amet, consectetur<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">1</a></sup> adipiscing elit, sed do eiusmod tempor<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">2</a></sup> incididunt ut labore et dolore magna aliqua.</p>
+</details>
 <h2 id="_3">更多種列表</h2>
 <p>除了基本語法提供的列表以外，Material for MkDocs 還提供了另外兩種列表，可以透過以下設定啟用：</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">def_list</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.tasklist</span><span class="p">:</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">      </span><span class="nt">custom_checkbox</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">def_list</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.tasklist</span><span class="p">:</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">      </span><span class="nt">custom_checkbox</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <h3 id="definition-lists">定義列表（Definition Lists）</h3>
 <p>定義列表提供一個方便的語法，讓名詞和其定義一目瞭然，適合用在說明參數、選項等等。其語法如下</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="sb">`--my-option`</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>:   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>My Parameter Name
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>:   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="sb">`--my-option`</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>:   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>My Parameter Name
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>:   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </span></code></pre></div>
 <details class="example">
 <summary>Preview</summary>
@@ -1396,9 +1453,9 @@
 </details>
 <h3 id="task-lists">任務列表（Task Lists）</h3>
 <p>這種列表也常見於 GitHub、HackMD 等服務中，用來建立一個任務清單。其語法如下：</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">- [ ]</span> 任務 1
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">- [x]</span> 任務 2
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">- [ ]</span> 任務 3
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">- [ ]</span> 任務 1
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="k">- [x]</span> 任務 2
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="k">- [ ]</span> 任務 3
 </span></code></pre></div>
 <details class="example">
 <summary>Preview</summary>
@@ -1408,64 +1465,7 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 任務 3</li>
 </ul>
 </details>
-<h2 id="annotation">註解 (Annotation)</h2>
-<p class="annotate">Material for MkDocs 提供的註解功能，讓我們可以在段落中的任何位置插入註解，適合用在你想補充說明一件事，但又不希望這件事太佔空間的時候(1)。</p>
-<ol>
-<li>
-<p>比如當你突然因為某種謎之衝動突然很想插入一大段隨機拉丁文的時候 <img alt="🫢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1fae2.svg" title=":face_with_open_eyes_and_hand_over_mouth:" /></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</li>
-</ol>
-<p>要啟用此功能，需要在 <code>mkdocs.yml</code> 中加入以下設定：</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attr_list</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">md_in_html</span>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.superfences</span>
-</span></code></pre></div>
-<p>使用註解功能的方式稍微比較複雜一點。首先在需要插入註解的地方，在「最外側 Markdown 區塊」的最後加入一行 <code>{ .annotate }</code> 如下：</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>{ .annotate }
-</span></code></pre></div>
-<p>這個語法會讓這個段落對應的 HTML 元素被加上 <code>annotate</code> 這個 class，接著我們就可以在段落中用 <code>(1)</code> 插入註解，並在後面用 <code>1.</code> 來完成註解內容。語法如下：</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Lorem ipsum dolor sit amet, consectetur(1) adipiscing elit, sed do eiusmod tempor(2) incididunt ut labore et dolore magna aliqua.
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>{ .annotate }
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="k">1.</span>  這是放在 consectetur 後面的註解
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="k">2.</span>  這是放在 tempor 後面的註解
-</span></code></pre></div>
-<details class="example">
-<summary>Preview</summary>
-<p class="annotate">Lorem ipsum dolor sit amet, consectetur(1) adipiscing elit, sed do eiusmod tempor(2) incididunt ut labore et dolore magna aliqua.</p>
-<ol>
-<li>這是放在 consectetur 後面的註解</li>
-<li>這是放在 tempor 後面的註解</li>
-</ol>
-</details>
-<h2 id="footnotes">腳註 (footnotes)</h2>
-<p class="annotate">這個功能讓我們可以在文章中加入腳註，腳註的內容會出現在文章的最後面(1)，並且會附帶連結，讓我們可以在文章和腳註之間跳來跳去。要啟用此功能，需要在 <code>mkdocs.yml</code> 中加入以下設定：</p>
-<ol>
-<li>Material for MkDocs 其實也有讓腳註加上 hover 效果（當滑鼠移到腳註標籤上時，會顯示出腳註內容）的功能，不過這個功能是贊助者 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"/></svg></span> 專屬的 <img alt="🥸" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f978.svg" title=":disguised_face:" /></li>
-</ol>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">footnotes</span>
-</span></code></pre></div>
-<p class="annotate">開啟功能後，我們可以在文件的任何地方使用 <code>[^1]</code> 插入腳註(1):</p>
-<ol>
-<li>這裡面的數字只是方便辨識（腳註的 ID），實際在產生網頁的時候會根據腳註出現的順序自動編號。但要注意這邊使用的數字不能重複，否則可能會有腳註內容被覆蓋掉。</li>
-</ol>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Lorem ipsum dolor sit amet, consectetur[^3] adipiscing elit, sed do eiusmod tempor[^4] incididunt ut labore et dolore magna aliqua.
-</span></code></pre></div>
-<p>而腳註內容可以在文件的任何地方補上，語法如下</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>[<span class="nl">^3</span>]: <span class="na">這是放在 consectetur 後面的腳註</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>[<span class="nl">^4</span>]:
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    <span class="na">這是放在 tempor 後面的腳註，我們可以利用縮排方式把好幾行文字都塞進來，但只能有一個段落（中間不能空行）。</span>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    以下假文章產生自[這邊](https://pinkylam.me/generator/chinese-lorem-ipsum/)：比化英交至園聽金想五師「眼水旦消羊雞北」很水各找那在良旁見林昌只祖雲同方，放員衣？古林哥只夕歡道重示媽信要采原犬做外裏意包，尼蝴祖何抄合高里玉坐笑從蝶什皮飯固法就九，視己又蝶苦隻尾快見。
-</span></code></pre></div>
-<details class="example">
-<summary>Preview</summary>
-<p>Lorem ipsum dolor sit amet, consectetur<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">1</a></sup> adipiscing elit, sed do eiusmod tempor<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">2</a></sup> incididunt ut labore et dolore magna aliqua.</p>
-</details>
-<h2 id="icons">Icons</h2>
+<h2 id="icons">圖示 (Icons)</h2>
 <p>Material for MkDocs 提供了許多不同的圖示（包含 emoji 等），可以透過以下設定啟用：</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
 </span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attr_list</span>
