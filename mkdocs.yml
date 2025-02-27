@@ -33,12 +33,15 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  icon:
+    annotation: material/arrow-right-circle
 
 plugins:
   - search
 
 markdown_extensions:
   - attr_list
+  - def_list
   - footnotes
   - md_in_html
   - admonition
@@ -60,6 +63,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 nav:
   - Home: index.md
@@ -84,6 +89,10 @@ nav:
     - Material for MkDocs 簡易教學:
       - internal/tutorial-zhtw/index.md
       - 快速開始: internal/tutorial-zhtw/getting-started.md
-      - 如何撰寫 Markdown 文件: internal/tutorial-zhtw/markdown.md
+      - 如何撰寫 Markdown 文件:
+        - internal/tutorial-zhtw/markdown/index.md
+        - 基本語法: internal/tutorial-zhtw/markdown/basic.md
+        - Material for MkDocs 擴充語法: internal/tutorial-zhtw/markdown/extensions.md
+        - HTML 區塊: internal/tutorial-zhtw/markdown/html-blocks.md
       - 設定 MkDocs 專案: internal/tutorial-zhtw/configuration.md
       - 建立不同版本的文件: internal/tutorial-zhtw/versioning.md

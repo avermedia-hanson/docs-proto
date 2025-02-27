@@ -7,7 +7,7 @@
 
 本教學將會包含以下幾個部分，希望可以幫助初學者快速上手：
 
-!!! note
+!!! info
     標題旁邊有 :construction: 的，表示該部分尚未完成 :person_bowing:
 
 <div class="grid cards" markdown>
@@ -16,23 +16,23 @@
 
     ---
 
-    包含安裝方式以及基本概念
+    包含安裝方式以及 MkDocs 專案的基本概念。
 
     [:octicons-arrow-right-24: 快速開始](getting-started.md)
 
-- ### 如何撰寫 Markdown 文件 :construction:
+- ### 如何撰寫 Markdown 文件
 
     ---
 
-    包含常見語法，以及 `mkdocs-material` 擴充的語法
+    包含常見語法，以及 `mkdocs-material` 擴充的語法。由於 `mkdocs-material` 擴充的功能非常豐富，建議即使是熟悉 Markdown 的讀者，也可以參考這個章節。
 
-    [:octicons-arrow-right-24: 如何撰寫 Markdown 文件](markdown.md)
+    [:octicons-arrow-right-24: 如何撰寫 Markdown 文件](markdown/index.md)
 
 - ### 設定 MkDocs 專案 :construction:
 
     ---
 
-    如何設定 `mkdocs.yml`
+    如何設定 `mkdocs.yml`。
 
     [:octicons-arrow-right-24: 設定 MkDocs 專案](configuration.md)
 
@@ -40,7 +40,7 @@
 
     ---
 
-    如何使用 `mike` 建立並發布不同版本的文件
+    如何使用 `mike` 建立並發布不同版本的文件。
 
     [:octicons-arrow-right-24: 建立不同版本的文件](versioning.md)
 

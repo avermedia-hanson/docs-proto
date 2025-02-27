@@ -90,7 +90,7 @@ nav:
 `My Section 1` 底下會有兩個子連結 `My Page 1` 和 `My Page 2`，而 `My Section 1` 本身
 也會連結到 `section_1/index.md`。
 
-## 撰寫 Markdown 文件
+## 開始撰寫文件
 
 這邊僅提供一個簡單的 Markdown 文件範例：
 
@@ -115,7 +115,7 @@ Some text at the beginning of Section 1.1.
 !!! tips
     雖然還有比 `h3` (`###`) 層級更低的標題（如 `####`），但一般來說前三層的效果會是最明顯的。
 
-關於 Markdown 語法，這邊不多贅述，請直接參考 [如何撰寫 Markdown 文件](markdown.md)。
+關於 Markdown 語法，這邊不多贅述，請直接參考 [如何撰寫 Markdown 文件](markdown/index.md)。
 
 ## 發布
 
@@ -124,4 +124,4 @@ Some text at the beginning of Section 1.1.
 ## 其他注意事項
 
 - 如果需要產生離線文件（不是放在線上），請務必參考 [設定 MkDocs 專案](configuration.md) 中有關離線文件的說明，否則網頁間的連結會無法正常運作。
-- 熟悉 Markdown 語法的各位請特別注意，在 `mkdocs-material` 的語法中，所有巢狀列表使用的縮排都是 4 個空白，而不是常見的 2/3 個。
+- 熟悉 Markdown 語法的各位請特別注意，在 `mkdocs-material` 的語法中，必須使用 4 個空白來縮排，才能把段落加入列表中。（很多其他程式容許使用 2 或 3 個空白）
