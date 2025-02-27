@@ -16,7 +16,7 @@
 
 1.  替代文字是當圖片無法顯示時，會顯示的文字。
 
-```markdown
+```html
 <figure>
     <img src="https://picsum.photos/600/200" alt="A Random Image">
     <figcaption>The caption for the image.</figcaption>

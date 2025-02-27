@@ -288,57 +288,6 @@ markdown_extensions:
 
     </div>
 
-## 更多種列表
-
-除了基本語法提供的列表以外，Material for MkDocs 還提供了另外兩種列表，可以透過以下設定啟用：
-
-```yaml
-markdown_extensions:
-  - def_list
-  - pymdownx.tasklist:
-      custom_checkbox: true
-```
-
-### 定義列表（Definition Lists）
-
-定義列表提供一個方便的語法，讓名詞和其定義一目瞭然，適合用在說明參數、選項等等。其語法如下
-
-```markdown
-`--my-option`
-
-:   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-My Parameter Name
-
-:   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-```
-
-??? example "Preview"
-
-    `--my-option`
-
-    :   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-    My Parameter Name
-
-    :   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-### 任務列表（Task Lists）
-
-這種列表也常見於 GitHub、HackMD 等服務中，用來建立一個任務清單。其語法如下：
-
-```markdown
-- [ ] 任務 1
-- [x] 任務 2
-- [ ] 任務 3
-```
-
-??? example "Preview"
-
-    - [ ] 任務 1
-    - [x] 任務 2
-    - [ ] 任務 3
-
 ## 註解 (Annotation)
 
 Material for MkDocs 提供的註解功能，讓我們可以在段落中的任何位置插入註解，適合用在你想補充說明一件事，但又不希望這件事太佔空間的時候(1)。
@@ -421,7 +370,58 @@ Lorem ipsum dolor sit amet, consectetur[^3] adipiscing elit, sed do eiusmod temp
         這是放在 tempor 後面的腳註，我們可以利用縮排方式把好幾行文字都塞進來，但只能有一個段落（中間不能空行）。
         以下假文章產生自[這邊](https://pinkylam.me/generator/chinese-lorem-ipsum/)：比化英交至園聽金想五師「眼水旦消羊雞北」很水各找那在良旁見林昌只祖雲同方，放員衣？古林哥只夕歡道重示媽信要采原犬做外裏意包，尼蝴祖何抄合高里玉坐笑從蝶什皮飯固法就九，視己又蝶苦隻尾快見。
 
-## Icons
+## 更多種列表
+
+除了基本語法提供的列表以外，Material for MkDocs 還提供了另外兩種列表，可以透過以下設定啟用：
+
+```yaml
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+```
+
+### 定義列表（Definition Lists）
+
+定義列表提供一個方便的語法，讓名詞和其定義一目瞭然，適合用在說明參數、選項等等。其語法如下
+
+```markdown
+`--my-option`
+
+:   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+My Parameter Name
+
+:   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+```
+
+??? example "Preview"
+
+    `--my-option`
+
+    :   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    My Parameter Name
+
+    :   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+### 任務列表（Task Lists）
+
+這種列表也常見於 GitHub、HackMD 等服務中，用來建立一個任務清單。其語法如下：
+
+```markdown
+- [ ] 任務 1
+- [x] 任務 2
+- [ ] 任務 3
+```
+
+??? example "Preview"
+
+    - [ ] 任務 1
+    - [x] 任務 2
+    - [ ] 任務 3
+
+## 圖示 (Icons)
 
 Material for MkDocs 提供了許多不同的圖示（包含 emoji 等），可以透過以下設定啟用：
 
