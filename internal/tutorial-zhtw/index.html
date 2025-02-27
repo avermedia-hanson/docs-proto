@@ -33,6 +33,12 @@
       
       
 
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6z"/></svg>');}</style>
+
 
     
     
@@ -538,9 +544,39 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="markdown/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="markdown/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     如何撰寫 Markdown 文件
@@ -548,7 +584,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -697,8 +739,8 @@
 開發者只需要撰寫 Markdown 文件，就可以輕鬆生成靜態網頁，既可以直接部署到伺服器上，
 也可以作為離線文件使用（基本上使用任何現代瀏覽器都可以開啟）。</p>
 <p>本教學將會包含以下幾個部分，希望可以幫助初學者快速上手：</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>標題旁邊有 <img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f6a7.svg" title=":construction:" /> 的，表示該部分尚未完成 <img alt="🙇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f647.svg" title=":person_bowing:" /></p>
 </div>
 <div class="grid cards">
@@ -706,25 +748,25 @@
 <li>
 <h3 id="_1">快速開始</h3>
 <hr />
-<p>包含安裝方式以及基本概念</p>
+<p>包含安裝方式以及 MkDocs 專案的基本概念。</p>
 <p><a href="getting-started/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> 快速開始</a></p>
 </li>
 <li>
-<h3 id="markdown">如何撰寫 Markdown 文件 <img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f6a7.svg" title=":construction:" /></h3>
+<h3 id="markdown">如何撰寫 Markdown 文件</h3>
 <hr />
-<p>包含常見語法，以及 <code>mkdocs-material</code> 擴充的語法</p>
+<p>包含常見語法，以及 <code>mkdocs-material</code> 擴充的語法。由於 <code>mkdocs-material</code> 擴充的功能非常豐富，建議即使是熟悉 Markdown 的讀者，也可以參考這個章節。</p>
 <p><a href="markdown/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> 如何撰寫 Markdown 文件</a></p>
 </li>
 <li>
 <h3 id="mkdocs">設定 MkDocs 專案 <img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f6a7.svg" title=":construction:" /></h3>
 <hr />
-<p>如何設定 <code>mkdocs.yml</code></p>
+<p>如何設定 <code>mkdocs.yml</code>。</p>
 <p><a href="configuration/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> 設定 MkDocs 專案</a></p>
 </li>
 <li>
 <h3 id="_2">建立不同版本的文件 <img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f6a7.svg" title=":construction:" /></h3>
 <hr />
-<p>如何使用 <code>mike</code> 建立並發布不同版本的文件</p>
+<p>如何使用 <code>mike</code> 建立並發布不同版本的文件。</p>
 <p><a href="versioning/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> 建立不同版本的文件</a></p>
 </li>
 </ul>

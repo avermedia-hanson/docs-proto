@@ -33,6 +33,12 @@
       
       
 
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6z"/></svg>');}</style>
+
 
     
     
@@ -607,16 +613,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#markdown" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      撰寫 Markdown 文件
+      開始撰寫文件
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       發布
     </span>
@@ -625,7 +631,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       其他注意事項
     </span>
@@ -648,9 +654,39 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../markdown/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../markdown/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     如何撰寫 Markdown 文件
@@ -658,7 +694,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -792,16 +834,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#markdown" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      撰寫 Markdown 文件
+      開始撰寫文件
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       發布
     </span>
@@ -810,7 +852,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       其他注意事項
     </span>
@@ -924,7 +966,7 @@
 <p>如此你就會看到導覽列中有兩個 top-level 的連結，分別是 <code>Home</code> 和 <code>My Section 1</code>，
 <code>My Section 1</code> 底下會有兩個子連結 <code>My Page 1</code> 和 <code>My Page 2</code>，而 <code>My Section 1</code> 本身
 也會連結到 <code>section_1/index.md</code>。</p>
-<h2 id="markdown">撰寫 Markdown 文件</h2>
+<h2 id="_6">開始撰寫文件</h2>
 <p>這邊僅提供一個簡單的 Markdown 文件範例：</p>
 <div class="language-markdown highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gh"># Your title</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
@@ -947,12 +989,12 @@
 <p>雖然還有比 <code>h3</code> (<code>###</code>) 層級更低的標題（如 <code>####</code>），但一般來說前三層的效果會是最明顯的。</p>
 </div>
 <p>關於 Markdown 語法，這邊不多贅述，請直接參考 <a href="../markdown/">如何撰寫 Markdown 文件</a>。</p>
-<h2 id="_6">發布</h2>
+<h2 id="_7">發布</h2>
 <p>關於發布，由於我們希望文件都能包含版本資訊，因此請直接參考 <a href="../versioning/">建立不同版本的文件</a>。</p>
-<h2 id="_7">其他注意事項</h2>
+<h2 id="_8">其他注意事項</h2>
 <ul>
 <li>如果需要產生離線文件（不是放在線上），請務必參考 <a href="../configuration/">設定 MkDocs 專案</a> 中有關離線文件的說明，否則網頁間的連結會無法正常運作。</li>
-<li>熟悉 Markdown 語法的各位請特別注意，在 <code>mkdocs-material</code> 的語法中，所有巢狀列表使用的縮排都是 4 個空白，而不是常見的 2/3 個。</li>
+<li>熟悉 Markdown 語法的各位請特別注意，在 <code>mkdocs-material</code> 的語法中，必須使用 4 個空白來縮排，才能把段落加入列表中。（很多其他程式容許使用 2 或 3 個空白）</li>
 </ul>
 
 
