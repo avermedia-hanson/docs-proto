@@ -9,12 +9,11 @@ This is a prototype for the AVerMedia Developer Hub (tentative name), a site for
 
 The main contents are in the [Softwares](softwares/index.md) section, where we demonstrate some of the features of this site and different ways to handle documentation of software products.
 
-<figure>
-  <img src="https://picsum.photos/1200/400" width="100%" alt="Random placeholder image">
-  <figcaption>
-    This is a random image from <a href="https://picsum.photos/">Lorem Picsum</a>.
-  </figcaption>
-</figure>
+![Random placeholder image](https://picsum.photos/1200/400){ width="100%" }
+
+/// caption
+This is a random image from [Lorem Picsum](https://picsum.photos/).
+///
 
 ## Section 1
 

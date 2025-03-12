@@ -432,6 +432,51 @@ My Parameter Name
     - [x] 任務 2
     - [ ] 任務 3
 
+## 說明文字 (Caption)
+
+這個功能讓我們可以在圖片、表格等元素後面加上說明文字，可以透過以下設定啟用：
+
+```yaml
+markdown_extensions:
+  - pymdownx.blocks.caption
+```
+
+接著，我們就可以在圖片或表格後面，加上說明文字如下：
+
+```markdown
+![一張隨機圖片](https://picsum.photos/1200/400)
+
+/// caption
+這是圖片的說明文字
+///
+
+| Column 1 | Column 2 |
+| -------- | -------- |
+| 1        | 2        |
+| 3        | 4        |
+
+/// caption
+這是表格的說明文字
+///
+```
+
+??? example "Preview"
+
+    ![一張隨機圖片](https://picsum.photos/1200/400)
+
+    /// caption
+    這是圖片的說明文字
+    ///
+
+    | Column 1 | Column 2 |
+    | -------- | -------- |
+    | 1        | 2        |
+    | 3        | 4        |
+
+    /// caption
+    這是表格的說明文字
+    ///
+
 ## 圖示 (Icons)
 
 Material for MkDocs 提供了許多不同的圖示（包含 emoji 等），可以透過以下設定啟用：
