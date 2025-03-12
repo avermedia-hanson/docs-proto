@@ -504,3 +504,157 @@ markdown_extensions:
     - :simple-pytorch: PyTorch 圖示
 
 據稱，Material for MkDocs 提供了超過 10000 種圖示，可以在 [官方文件](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/) 進行查詢。
+
+## 圖表 (Diagram)
+
+Material for MkDocs 支援使用 [Mermaid.js](https://mermaid.js.org/) 來繪製圖表，可以透過以下設定啟用：
+
+```yaml
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+```
+
+雖然 Mermaid.js 提供非常多種圖表類型，但 Material for MkDocs 只支援其中一部分，其他類型的圖表雖然一樣會被繪製出來，但在字體、顏色、手機版顯示等部分有可能會出現問題。以下是 Material for MkDocs 支援的圖表類型：
+
+- 流程圖 (Flowcharts)
+- 時序圖 (Sequence Diagrams)
+- 狀態圖 (State Diagrams)
+- 類別圖 (Class Diagrams)
+- ER 圖 (Entity-Relationship Diagrams)
+
+以下僅簡單介紹流程圖，有關更詳細的語法以及其他類型的圖表，可以參考 [Mermaid.js 的官方文件](https://mermaid.js.org/syntax/flowchart.html)。
+
+只要把 Mermaid.js 的語法包在 code block 中，再加上 `mermaid` 關鍵字，`mkdocs-material` 就會把它渲染成圖表。
+
+````markdown
+```mermaid
+---
+title: A Simple Flowchart (From Top to Bottom)
+---
+flowchart TD
+    A[Compile the program] --> B{Error?}
+    B -- Yes --> C(Self Doubt)
+    C --> D(Ask AI)
+    D --> E(Try to fix it)
+    E --> A
+    B -- No --> F(There must be something wrong)
+    F --> D
+```
+````
+
+??? example "Preview"
+
+    ```mermaid
+    ---
+    title: A Simple Flowchart (From Top to Bottom)
+    ---
+    flowchart TD
+        A[Compile the program] --> B{Error?}
+        B -- Yes --> C(Self Doubt)
+        C --> D(Ask AI)
+        D --> E(Try to fix it)
+        E --> A
+        B -- No --> F(There must be something wrong)
+        F --> D
+    ```
+
+流程圖（以下使用由左至右的流程圖）也可能可以用來說明 GStreamer pipeline 的概念等等。
+
+````markdown
+```mermaid
+---
+title: A Pipeline?
+---
+flowchart LR
+    src1([Source 1])
+    src2([Source 2])
+    mixer(Mixer)
+    sink([Sink])
+
+    filter1("Filter 1
+        You can also enclose the text with double quotes to make it multiline.")
+    filter2("`Filter 2<br/>
+        You can even write basic **Markdown** with *this syntax*. Note that many features like headings are ***not supported***.`")
+
+    A@{ shape: comment, label: "In this example, we first declare the nodes without connecting them for better readability." }
+
+    src1 --> filter1
+    filter1 -- "Some caps?
+        it is also possible to include multiple lines here." --> filter2
+    filter2 --> mixer
+    src2 --> mixer
+    mixer --> sink
+```
+````
+
+??? example "Preview"
+
+    ```mermaid
+    ---
+    title: A Pipeline?
+    ---
+    flowchart LR
+        src1([Source 1])
+        src2([Source 2])
+        mixer(Mixer)
+        sink([Sink])
+
+        filter1("Filter 1
+            You can also enclose the text with double quotes to make it multiline.")
+        filter2("`Filter 2<br/>
+            You can even write basic **Markdown** with *this syntax*. Note that many features like headings are ***not supported***.`")
+
+        A@{ shape: comment, label: "In this example, we first declare the nodes without connecting them for better readability." }
+
+        src1 --> filter1
+        filter1 -- "Some caps?
+            it is also possible to include multiple lines here." --> filter2
+        filter2 --> mixer
+        src2 --> mixer
+        mixer --> sink
+    ```
+
+??? note "過長的流程圖"
+
+    如果流程太長的話，為了塞進網頁的寬度中，流程圖會被縮得很小，目前還沒找到方法在 Material for MkDocs 的框架下解決這個問題。
+
+    ```mermaid
+    ---
+    title: A long flowchart
+    ---
+    flowchart LR
+        A[A] --> B[B]
+        B --> C[C]
+        C --> D[D]
+        D --> E[E]
+        E --> F[F]
+        F --> G[G]
+        G --> H[H]
+        H --> I[I]
+        I --> J[J]
+        J --> K[K]
+        K --> L[L]
+        L --> M[M]
+        M --> N[N]
+        N --> O[O]
+    ```
+
+    一個可能的替代方案，是用 [Block Diagram](https://mermaid.js.org/syntax/block.html) 來讓流程圖折返。然而 Material for MkDocs 並不支援 Block Diagram，所以在外觀上可能會出現問題（也比較不好看）。
+
+    ```mermaid
+    block-beta
+        columns 5
+        A space B space C
+        space space space space space
+        F space E space D
+
+        A --> B
+        B --> C
+        C --> D
+        D --> E
+        E --> F
+    ```
