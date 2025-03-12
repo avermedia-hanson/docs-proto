@@ -54,6 +54,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -808,9 +810,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#caption" class="md-nav__link">
+    <span class="md-ellipsis">
+      說明文字 (Caption)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#icons" class="md-nav__link">
     <span class="md-ellipsis">
       圖示 (Icons)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      圖表 (Diagram)
     </span>
   </a>
   
@@ -1067,9 +1087,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#caption" class="md-nav__link">
+    <span class="md-ellipsis">
+      說明文字 (Caption)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#icons" class="md-nav__link">
     <span class="md-ellipsis">
       圖示 (Icons)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      圖表 (Diagram)
     </span>
   </a>
   
@@ -1336,7 +1374,7 @@
 </span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
 </span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    ---
 </span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
-</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    就和一般的列表一樣，你可以把其中一段文字變成 `<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>` 標題。
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    就和一般的列表一樣，你可以把其中一段文字變成 `<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>` 標題，但要注意這個 `<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>` 也會出現在網頁目錄中……。
 </span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
 </span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>- 其實卡片也不見得要用上面那種樣式
 </span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>- :simple-markdown: 加上 icon 的效果看起來也不錯
@@ -1345,6 +1383,9 @@
 </span></code></pre></div>
 <details class="example">
 <summary>Preview</summary>
+<blockquote>
+<p>由於本網站有使用自定義的 CSS 來改變卡片外觀，所以會和 Material for MkDocs 的預設外觀有些許不同。</p>
+</blockquote>
 <div class="grid cards" markdown>
 <ul>
 <li>
@@ -1364,6 +1405,15 @@
 </ul>
 </div>
 </details>
+<div class="admonition note">
+<p class="admonition-title">卡片其實有更好的做法</p>
+<p>這邊介紹的是 Material for MkDocs 推薦的方式，使用 Markdown in HTML 來降低學習成本。但就像上面提到的，這種作法有一個很嚴重的限制是，不能在卡片中使用標題，否則這個標題會汙染網頁目錄。</p>
+<p>若使用 <a href="../html-blocks/">這邊</a> 介紹的純 HTML 語法，則可以：</p>
+<ul>
+<li>避開網頁目錄被汙染的問題，可以自由在卡片中使用 <code>&lt;h1&gt;</code>、<code>&lt;h2&gt;</code> 等標題。</li>
+<li>讓整張卡片變成一個超連結</li>
+</ul>
+</div>
 <h2 id="annotation">註解 (Annotation)</h2>
 <p class="annotate">Material for MkDocs 提供的註解功能，讓我們可以在段落中的任何位置插入註解，適合用在你想補充說明一件事，但又不希望這件事太佔空間的時候(1)。</p>
 <ol>
@@ -1465,18 +1515,71 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 任務 3</li>
 </ul>
 </details>
+<h2 id="caption">說明文字 (Caption)</h2>
+<p>這個功能讓我們可以在圖片、表格等元素後面加上說明文字，可以透過以下設定啟用：</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.blocks.caption</span>
+</span></code></pre></div>
+<p>接著，我們就可以在圖片或表格後面，加上說明文字如下：</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>![<span class="nt">一張隨機圖片</span>](<span class="na">https://picsum.photos/1200/400</span>)
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>/// caption
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>這是圖片的說明文字
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>///
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>| Column 1 | Column 2 |
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>| -------- | -------- |
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>| 1        | 2        |
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>| 3        | 4        |
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>/// caption
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>這是表格的說明文字
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>///
+</span></code></pre></div>
+<details class="example">
+<summary>Preview</summary>
+<figure>
+<p><img alt="一張隨機圖片" src="https://picsum.photos/1200/400" /></p>
+<figcaption>
+<p>這是圖片的說明文字</p>
+</figcaption>
+</figure>
+<figure>
+<table>
+<thead>
+<tr>
+<th>Column 1</th>
+<th>Column 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
+<p>這是表格的說明文字</p>
+</figcaption>
+</figure>
+</details>
 <h2 id="icons">圖示 (Icons)</h2>
 <p>Material for MkDocs 提供了許多不同的圖示（包含 emoji 等），可以透過以下設定啟用：</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attr_list</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.emoji</span><span class="p">:</span>
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">      </span><span class="nt">emoji_index</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/name:material.extensions.emoji.twemoji</span>
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">      </span><span class="nt">emoji_generator</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/name:material.extensions.emoji.to_svg</span>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attr_list</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.emoji</span><span class="p">:</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">      </span><span class="nt">emoji_index</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/name:material.extensions.emoji.twemoji</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">      </span><span class="nt">emoji_generator</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/name:material.extensions.emoji.to_svg</span>
 </span></code></pre></div>
 <p>使用方式也很簡單，用 <code>:</code> 把圖示名稱給包起來，<code>mkdocs-material</code> 就可以辨識它並轉換成圖示了：</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">-</span><span class="w"> </span>:material-arrow-up-left: 彎彎的箭頭
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="k">-</span><span class="w"> </span>:simple-cplusplus: C++ 圖示
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="k">-</span><span class="w"> </span>:simple-pytorch: PyTorch 圖示
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">-</span><span class="w"> </span>:material-arrow-up-left: 彎彎的箭頭
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="k">-</span><span class="w"> </span>:simple-cplusplus: C++ 圖示
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="k">-</span><span class="w"> </span>:simple-pytorch: PyTorch 圖示
 </span></code></pre></div>
 <details class="example">
 <summary>Preview</summary>
@@ -1487,6 +1590,138 @@
 </ul>
 </details>
 <p>據稱，Material for MkDocs 提供了超過 10000 種圖示，可以在 <a href="https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/">官方文件</a> 進行查詢。</p>
+<h2 id="diagram">圖表 (Diagram)</h2>
+<p>Material for MkDocs 支援使用 <a href="https://mermaid.js.org/">Mermaid.js</a> 來繪製圖表，可以透過以下設定啟用：</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.superfences</span><span class="p">:</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">      </span><span class="nt">custom_fences</span><span class="p">:</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mermaid</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">          </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mermaid</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">          </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/name:pymdownx.superfences.fence_code_format</span>
+</span></code></pre></div>
+<p>雖然 Mermaid.js 提供非常多種圖表類型，但 Material for MkDocs 只支援其中一部分，其他類型的圖表雖然一樣會被繪製出來，但在字體、顏色、手機版顯示等部分有可能會出現問題。以下是 Material for MkDocs 支援的圖表類型：</p>
+<ul>
+<li>流程圖 (Flowcharts)</li>
+<li>時序圖 (Sequence Diagrams)</li>
+<li>狀態圖 (State Diagrams)</li>
+<li>類別圖 (Class Diagrams)</li>
+<li>ER 圖 (Entity-Relationship Diagrams)</li>
+</ul>
+<p>以下僅簡單介紹流程圖，有關更詳細的語法以及其他類型的圖表，可以參考 <a href="https://mermaid.js.org/syntax/flowchart.html">Mermaid.js 的官方文件</a>。</p>
+<p>只要把 Mermaid.js 的語法包在 code block 中，再加上 <code>mermaid</code> 關鍵字，<code>mkdocs-material</code> 就會把它渲染成圖表。</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="gu">```mermaid</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="gu">---</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="gu">title: A Simple Flowchart (From Top to Bottom)</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="gu">---</span>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>flowchart TD
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>    A[Compile the program] --&gt; B{Error?}
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>    B -- Yes --&gt; C(Self Doubt)
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>    C --&gt; D(Ask AI)
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>    D --&gt; E(Try to fix it)
+</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>    E --&gt; A
+</span><span id="__span-26-11"><a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>    B -- No --&gt; F(There must be something wrong)
+</span><span id="__span-26-12"><a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a>    F --&gt; D
+</span><span id="__span-26-13"><a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a>```
+</span></code></pre></div>
+<details class="example">
+<summary>Preview</summary>
+<pre class="mermaid"><code>---
+title: A Simple Flowchart (From Top to Bottom)
+---
+flowchart TD
+    A[Compile the program] --&gt; B{Error?}
+    B -- Yes --&gt; C(Self Doubt)
+    C --&gt; D(Ask AI)
+    D --&gt; E(Try to fix it)
+    E --&gt; A
+    B -- No --&gt; F(There must be something wrong)
+    F --&gt; D</code></pre>
+</details>
+<p>流程圖（以下使用由左至右的流程圖）也可能可以用來說明 GStreamer pipeline 的概念等等。</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="gu">```mermaid</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="gu">---</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="gu">title: A Pipeline?</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="gu">---</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>flowchart LR
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>    src1([Source 1])
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>    src2([Source 2])
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>    mixer(Mixer)
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>    sink([Sink])
+</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>
+</span><span id="__span-27-11"><a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>    filter1(&quot;Filter 1
+</span><span id="__span-27-12"><a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>        You can also enclose the text with double quotes to make it multiline.&quot;)
+</span><span id="__span-27-13"><a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>    filter2(&quot;`Filter 2&lt;br/&gt;
+</span><span id="__span-27-14"><a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a>        You can even write basic <span class="gs">**Markdown**</span> with <span class="ge">*this syntax*</span>. Note that many features like headings are ***not supported***.`&quot;)
+</span><span id="__span-27-15"><a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a>
+</span><span id="__span-27-16"><a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a>    A@{ shape: comment, label: &quot;In this example, we first declare the nodes without connecting them for better readability.&quot; }
+</span><span id="__span-27-17"><a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a>
+</span><span id="__span-27-18"><a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a>    src1 --&gt; filter1
+</span><span id="__span-27-19"><a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a>    filter1 -- &quot;Some caps?
+</span><span id="__span-27-20"><a id="__codelineno-27-20" name="__codelineno-27-20" href="#__codelineno-27-20"></a>        it is also possible to include multiple lines here.&quot; --&gt; filter2
+</span><span id="__span-27-21"><a id="__codelineno-27-21" name="__codelineno-27-21" href="#__codelineno-27-21"></a>    filter2 --&gt; mixer
+</span><span id="__span-27-22"><a id="__codelineno-27-22" name="__codelineno-27-22" href="#__codelineno-27-22"></a>    src2 --&gt; mixer
+</span><span id="__span-27-23"><a id="__codelineno-27-23" name="__codelineno-27-23" href="#__codelineno-27-23"></a>    mixer --&gt; sink
+</span><span id="__span-27-24"><a id="__codelineno-27-24" name="__codelineno-27-24" href="#__codelineno-27-24"></a>```
+</span></code></pre></div>
+<details class="example">
+<summary>Preview</summary>
+<pre class="mermaid"><code>---
+title: A Pipeline?
+---
+flowchart LR
+    src1([Source 1])
+    src2([Source 2])
+    mixer(Mixer)
+    sink([Sink])
+
+    filter1("Filter 1
+        You can also enclose the text with double quotes to make it multiline.")
+    filter2("`Filter 2&lt;br/&gt;
+        You can even write basic **Markdown** with *this syntax*. Note that many features like headings are ***not supported***.`")
+
+    A@{ shape: comment, label: "In this example, we first declare the nodes without connecting them for better readability." }
+
+    src1 --&gt; filter1
+    filter1 -- "Some caps?
+        it is also possible to include multiple lines here." --&gt; filter2
+    filter2 --&gt; mixer
+    src2 --&gt; mixer
+    mixer --&gt; sink</code></pre>
+</details>
+<details class="note">
+<summary>過長的流程圖</summary>
+<p>如果流程太長的話，為了塞進網頁的寬度中，流程圖會被縮得很小，目前還沒找到方法在 Material for MkDocs 的框架下解決這個問題。</p>
+<pre class="mermaid"><code>---
+title: A long flowchart
+---
+flowchart LR
+    A[A] --&gt; B[B]
+    B --&gt; C[C]
+    C --&gt; D[D]
+    D --&gt; E[E]
+    E --&gt; F[F]
+    F --&gt; G[G]
+    G --&gt; H[H]
+    H --&gt; I[I]
+    I --&gt; J[J]
+    J --&gt; K[K]
+    K --&gt; L[L]
+    L --&gt; M[M]
+    M --&gt; N[N]
+    N --&gt; O[O]</code></pre>
+<p>一個可能的替代方案，是用 <a href="https://mermaid.js.org/syntax/block.html">Block Diagram</a> 來讓流程圖折返。然而 Material for MkDocs 並不支援 Block Diagram，所以在外觀上可能會出現問題（也比較不好看）。</p>
+<pre class="mermaid"><code>block-beta
+    columns 5
+    A space B space C
+    space space space space space
+    F space E space D
+
+    A --&gt; B
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F</code></pre>
+</details>
 <div class="footnote">
 <hr />
 <ol>
