@@ -259,7 +259,7 @@ markdown_extensions:
 
     ---
 
-    就和一般的列表一樣，你可以把其中一段文字變成 `<h3>` 標題。
+    就和一般的列表一樣，你可以把其中一段文字變成 `<h3>` 標題，但要注意這個 `<h3>` 也會出現在網頁目錄中……。
 
 - 其實卡片也不見得要用上面那種樣式
 - :simple-markdown: 加上 icon 的效果看起來也不錯
@@ -268,6 +268,8 @@ markdown_extensions:
 ```
 
 ??? example "Preview"
+
+    > 由於本網站有使用自定義的 CSS 來改變卡片外觀，所以會和 Material for MkDocs 的預設外觀有些許不同。
 
     <div class="grid cards" markdown>
 
@@ -287,6 +289,15 @@ markdown_extensions:
     - :simple-markdown: 加上 icon 的效果看起來也不錯
 
     </div>
+
+!!! note "卡片其實有更好的做法"
+
+    這邊介紹的是 Material for MkDocs 推薦的方式，使用 Markdown in HTML 來降低學習成本。但就像上面提到的，這種作法有一個很嚴重的限制是，不能在卡片中使用標題，否則這個標題會汙染網頁目錄。
+
+    若使用 [這邊](html-blocks.md) 介紹的純 HTML 語法，則可以：
+
+    - 避開網頁目錄被汙染的問題，可以自由在卡片中使用 `<h1>`、`<h2>` 等標題。
+    - 讓整張卡片變成一個超連結
 
 ## 註解 (Annotation)
 

@@ -1,0 +1,45 @@
+/* Card colors */
+[data-md-color-scheme="default"] {
+    --card-bg-color: hsl(var(--md-hue), 15%, 97%);
+    --card-link-bg-color-hover: hsl(var(--md-hue), 15%, 92%);
+}
+
+[data-md-color-scheme="slate"] {
+    --card-bg-color: hsl(var(--md-hue), 15%, 20%);
+    --card-link-bg-color-hover: hsl(var(--md-hue), 15%, 25%);
+}
+
+/* Grid styles */
+.md-typeset .grid {
+    grid-gap: .6rem;
+}
+
+/* Common styles for all the cards */
+.md-typeset .grid>.card, .md-typeset .grid.cards>ul>li {
+    background-color: var(--card-bg-color);
+    border: 0.1rem solid transparent;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition:
+        border-color 250ms ease,
+        box-shadow 250ms ease,
+        background-color 250ms ease;
+
+    &:hover {
+        border-color: var(--md-default-fg-color--lightest);
+    }
+}
+
+/* Clickable cards */
+.md-typeset .grid>a.card {
+    color: var(--md-default-fg-color);
+    transition:
+        box-shadow 250ms ease,
+        background-color 250ms ease;
+
+    &:hover {
+        color: var(--md-default-fg-color);
+        background-color: var(--card-link-bg-color-hover);
+        border-color: transparent !important;
+    }
+}
