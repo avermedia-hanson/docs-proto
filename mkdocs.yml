@@ -93,8 +93,9 @@ nav:
     - Some AI SDK:
       - softwares/some-ai-sdk/index.md
   - Internal:
-    - internal/tutorial-zhtw/index.md
-    - Material for MkDocs 簡易教學:
+    - internal/index.md
+    - 文件撰寫規範: internal/guidelines.md
+    - Material for MkDocs 教學:
       - internal/tutorial-zhtw/index.md
       - 快速開始: internal/tutorial-zhtw/getting-started.md
       - 如何撰寫 Markdown 文件:
